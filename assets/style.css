@@ -1,0 +1,104 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: whitesmoke; */
+  background: linear-gradient(135deg , rgb(204, 191, 191) , rgb(150, 150, 150));
+  /* background: -webkit-linear-gradient(
+    to right,
+    #004e92,
+    #000428
+  );
+  background: linear-gradient(
+    to right,
+    #004e92,
+    #000428
+  );  */
+}
+
+.calculator {
+    margin: 10px;
+  width: 400px;
+  border-radius: 14px;
+  background: white;
+  box-shadow: 10px 10px 10px grey;
+}
+/* Display */
+.calculator-display{
+    background: black;
+    color: white;
+    margin: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius:10px 10px 0px 0px ;
+}
+.calculator-display h1{
+    margin: 0px;
+    padding: 15px;
+    font-size: 50px;
+    font-family: 'Lucida Console', sans-serif;
+    font-weight: 100;
+    overflow-x: auto;
+}
+.calculator-buttons{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+    padding: 10px;
+}
+button{
+    min-height: 50px;
+    font-size: 20px;
+    font-weight: 100;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgb(199, 199, 199);
+}
+button:hover{
+    filter: brightness(110%);
+}
+
+button:active{
+    transform: translateY(2px);
+}
+.operator{
+    background: rgb(102, 102, 102);
+    color: white;
+    font-size: 30px;
+}
+.equal-sign{
+    grid-column: -2;
+    grid-row: 2 /span 4;
+    background: rgb(63, 205, 50);
+}
+.clear{
+    color: white;
+    font-size: 25px;
+    font-weight: 300;
+    background: linear-gradient(180deg , red ,rgb(211, 0, 0));
+}
+.clear:hover{
+    filter: brightness(90%);
+}
+.decimal{
+    color: white;
+    background: grey;
+}
+/* loader */
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0%;
+    background: rgba(107, 107, 107, 0.288);
+}
+.loader img{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
